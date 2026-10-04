@@ -3,7 +3,7 @@
  * Page copy (projects, team, testimonials, posts, FAQs, services, commitments) lives in the other content/*.ts files.
  */
 export const site = {
-  url: "https://summit-interiors.vercel.app",
+  url: "https://summit-interiors-ug.vercel.app",
   locale: "en_UG",
 
   /** Short brand name used in running text ("At Summit, …"). */
