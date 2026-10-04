@@ -1,16 +1,22 @@
 import { cn } from "@/lib/utils";
 
 /**
- * The client's logo symbol, shown left of the wordmark. Each client branch replaces this with a redrawn copy of their
- * own symbol; this generic house is the fallback when their logo can't be read. Uses the text colour.
+ * Maliha logo symbol, redrawn from the client's badge: two pendant lamps hanging inside a rounded square.
+ * Uses the text colour, so it flips on dark backgrounds (the logo itself is black on white).
  */
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 60 58" className={cn("shrink-0", className)}>
-      <g stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 25 30 4l26 21" strokeWidth="3.4" />
-        <path d="M11 20v34h38V20" strokeWidth="2" />
-        <path d="M25 54V38h10v16" strokeWidth="2" />
+    <svg aria-hidden="true" viewBox="0 0 60 60" className={cn("shrink-0", className)}>
+      <rect x="3" y="3" width="54" height="54" rx="9" fill="none" stroke="currentColor" strokeWidth="2.8" />
+      <g stroke="currentColor" strokeWidth="1.3">
+        <path d="M24 4.4V37" />
+        <path d="M40 4.4V27" />
+      </g>
+      <g fill="currentColor">
+        <rect x="21.6" y="36" width="4.8" height="3.2" rx="0.6" />
+        <path d="M15 48a9 9 0 0 1 18 0z" />
+        <rect x="37.6" y="26" width="4.8" height="3.2" rx="0.6" />
+        <path d="M31 38a9 9 0 0 1 18 0z" />
       </g>
     </svg>
   );
