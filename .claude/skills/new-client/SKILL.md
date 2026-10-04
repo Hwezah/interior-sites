@@ -100,6 +100,9 @@ Start `npx next dev -p <free port>` in the client folder, then:
 5. Poll `GET /v13/deployments/<id>` every 15 s until `readyState` is `READY` and `alias` contains `<name>.vercel.app`
    (the sandbox can't open `*.vercel.app`; the alias is the confirmation). Later pushes to the branch go live by
    themselves; pushes to other branches show as CANCELED in this project — that's the ignore step working.
+6. If the alias got a random suffix instead (e.g. `<name>-flax.vercel.app` — someone else owns `<name>.vercel.app`),
+   add a clean one: `POST /v10/projects/<name>/domains` `{"name": "<name>-ug.vercel.app"}` (check `verified: true`),
+   set `site.url` to it, push, and use that address in the pitch.
 
 ## 6. Hand over
 
