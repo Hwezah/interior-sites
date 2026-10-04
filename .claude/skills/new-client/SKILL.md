@@ -43,7 +43,7 @@ is blocked) so you can see its details. Don't guess anything that isn't shown â€
 - Work in a separate folder per client (a git worktree), so `main` stays clean:
 
 ```bash
-cd /home/user/interior-sites && git fetch -q origin main
+cd /home/user/interior-sites && git fetch -q origin main:refs/remotes/origin/main
 [ -d node_modules ] || npm ci            # once per session
 git worktree add /home/user/clients/<name> -b <name> origin/main
 cp -al node_modules /home/user/clients/<name>/node_modules   # hard links; a symlink breaks Turbopack
