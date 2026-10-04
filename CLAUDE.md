@@ -2,6 +2,8 @@
 
 # Interior sites — project rules
 
+**This branch: `mibemax-interiors` (Mibemax Interior Finishes, Kenya — phone codes +254).**
+
 This repo holds one website per interior-design client. **`main` is the template; every client is a branch** named
 after them (e.g. `pasha-interiors`), deployed by its own Vercel project whose production branch is that branch.
 - New client = new branch from `main` (see `.claude/skills/new-client/SKILL.md`). Never merge one client's branch into
@@ -18,9 +20,9 @@ Stack: Next.js App Router (TypeScript) · Tailwind v4 · shadcn/ui (`components/
 (`context/`) · Supabase placeholder (`lib/supabase`, inactive until env vars are set).
 
 - Tokens are CSS variables in `app/globals.css`, mirrored into Tailwind via `@theme inline`.
-- Brand colour (set in `content/site.ts` → `site.colors`; client decision, overrides the handoff's green): `--brand` #2E1F12 is the main colour (dark
-  sections, filled buttons, active chips, footer); `--brand-mid` #8B5E3C is the accent on light backgrounds
-  (highlighted words, link hover, cursor, focus); `--brand-tint` #EADBC8 is the highlight underline.
+- Brand colour (set in `content/site.ts` → `site.colors`, from the Mibemax logo): `--brand` #12502A (dark green) is the main colour (dark
+  sections, filled buttons, active chips, footer); `--brand-mid` #1E7F3A is the accent on light backgrounds
+  (highlighted words, link hover, cursor, focus); `--brand-tint` #DDF2E2 is the highlight underline.
 - Theming: light/dark via `<html data-theme>` (set before paint by `themeInitScript`, state in
   `context/ThemeContext.tsx`, toggle `components/layout/ThemeToggle.tsx`). Use flipping tokens (`paper`, `ink`,
   `line`, `muted-*`, `surface-*`, `fill`, `img-bg`) for page surfaces/text; use fixed `white` / `#111` only for
