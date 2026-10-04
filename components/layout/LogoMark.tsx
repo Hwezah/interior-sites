@@ -1,17 +1,15 @@
 import { cn } from "@/lib/utils";
 
 /**
- * The client's logo symbol, shown left of the wordmark. Each client branch replaces this with a redrawn copy of their
- * own symbol; this generic house is the fallback when their logo can't be read. Uses the text colour.
+ * Doozy logo symbol, redrawn from the client's badge (without its teal circle): a white D outline over a turquoise D,
+ * with the gold curve inside. The white outline uses the text colour so it shows on light backgrounds too.
  */
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 60 58" className={cn("shrink-0", className)}>
-      <g stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 25 30 4l26 21" strokeWidth="3.4" />
-        <path d="M11 20v34h38V20" strokeWidth="2" />
-        <path d="M25 54V38h10v16" strokeWidth="2" />
-      </g>
+    <svg aria-hidden="true" viewBox="0 0 56 60" className={cn("shrink-0", className)}>
+      <path d="M3 4h20a26 26 0 0 1 0 52H3z" fill="#3CC7C7" />
+      <path d="M11 6.5h15.5a23.5 23.5 0 0 1 0 47H11z" fill="none" stroke="currentColor" strokeWidth="5" strokeLinejoin="round" />
+      <path d="M22 13v16c0 3.2 1.8 5 5 5h5.5c3.2 0 5 1.8 5 5v4.5" fill="none" stroke="#E0B33A" strokeWidth="2.6" strokeLinecap="round" />
     </svg>
   );
 }

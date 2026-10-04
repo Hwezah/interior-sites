@@ -94,11 +94,11 @@ export default function HomePage() {
         <div data-m-center className="relative flex flex-col gap-7">
           <div className="text-[14px] uppercase">— About Us</div>
           <p className="relative m-0 max-w-[1320px] font-serif text-[clamp(32px,4.4vw,66px)] leading-[1.18] tracking-[-.02em] text-pretty">
-            We are an interior design studio creating calm, functional and lasting spaces. Experienced in{" "}
+            We are a lux décor and interior design studio in Uganda. Experienced in{" "}
             <Link href="/portfolio" className="hl-brand">
               residential and commercial projects
             </Link>
-            , pairing natural materials with comfort and purpose. Currently shaping homes that feel native to the people who live in them.
+             — with custom upholstery made in our own workshop.
           </p>
         </div>
         <ReelCard image={pexels(1918291)} />
