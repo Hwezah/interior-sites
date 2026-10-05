@@ -19,7 +19,7 @@ import { TestimonialSplit } from "@/components/sections/TestimonialSplit";
 
 export const metadata: Metadata = {
   title: { absolute: `${site.fullName} — Interior Solutions` },
-  description: `Rooms shaped around how you live. Calm, considered interiors made to last — an interior design studio in ${site.location}.`,
+  description: `Gypsum ceilings with LED lighting, partitions and flooring for homes and offices in ${site.location}.`,
 };
 
 const reasonIcons = { gem: Gem, eye: Eye, pen: PenTool, layers: Layers } as const;
@@ -38,7 +38,7 @@ export default function HomePage() {
           </div>
           <HeroTitle className="m-0 mb-7 font-serif text-[clamp(52px,8.4vw,128px)] leading-none tracking-[-.02em]" parts={["Interior Solutions"]} />
           <p className="hero-fade m-0 mb-9 max-w-[620px] text-[18px] font-light" style={{ animationDelay: "1000ms" }}>
-            Rooms shaped around how you live. Calm, considered interiors made to last.
+            Ceilings, walls and floors, finished properly. Clean lines and light, made to last.
           </p>
           {/* Mobile portrait: both CTAs stack, centred, 80vw; "or" is dropped. */}
           <div data-m-stack data-m-center className="hero-fade pointer-events-auto flex flex-wrap items-center gap-7" style={{ animationDelay: "1150ms" }}>
@@ -94,11 +94,11 @@ export default function HomePage() {
         <div data-m-center className="relative flex flex-col gap-7">
           <div className="text-[14px] uppercase">— About Us</div>
           <p className="relative m-0 max-w-[1320px] font-serif text-[clamp(32px,4.4vw,66px)] leading-[1.18] tracking-[-.02em] text-pretty">
-            We are an interior design studio creating calm, functional and lasting spaces. Experienced in{" "}
+            We fit gypsum ceilings, partitions and floors that finish a room properly. Experienced in{" "}
             <Link href="/portfolio" className="hl-brand">
               residential and commercial projects
             </Link>
-            , pairing natural materials with comfort and purpose. Currently shaping homes that feel native to the people who live in them.
+            , we light up homes and offices across Kampala with clean ceilings and walls.
           </p>
         </div>
         <ReelCard image={pexels(1918291)} />
