@@ -31,7 +31,7 @@ export function Wordmark({
         className={
           size === "footer"
             ? "h-[50px] w-auto"
-            : cn("h-[42px] w-auto mp:h-[37px]", hd && "max-[900px]:h-[37px]")
+            : cn("h-[42px] w-auto mp:h-[37px]", hd && "max-[900px]:h-[37px] max-[700px]:landscape:h-[32px]")
         }
       />
       <span className="inline-flex min-w-0 flex-col">
@@ -44,7 +44,7 @@ export function Wordmark({
                 : "tracking-[.04em]"
               : "tracking-[-.02em]",
             {
-              header: "text-[30px] max-[900px]:text-[26px] mp:text-[26px]",
+              header: "text-[30px] max-[900px]:text-[26px] max-[700px]:landscape:text-[22px] mp:text-[26px]",
               panel: "text-[28px] mp:text-[26px]",
               footer: "text-[34px]",
             }[size],
@@ -61,12 +61,12 @@ export function Wordmark({
             long
               ? size === "footer"
                 ? "mt-0.5 text-[10px]"
-                : cn("mt-0.5 text-[9px] mp:text-[8px]", hd && "max-[900px]:text-[8px]")
+                : cn("mt-0.5 text-[9px] mp:text-[8px]", hd && "max-[900px]:text-[8px] max-[700px]:landscape:text-[7px]")
               : size === "footer"
                 ? "mt-0 text-[12px]"
-                : cn("text-[11px] mp:-mt-px mp:text-[10px]", hd && "max-[900px]:-mt-px max-[900px]:text-[10px]"),
+                : cn("text-[11px] mp:-mt-px mp:text-[10px]", hd && "max-[900px]:-mt-px max-[900px]:text-[10px] max-[700px]:landscape:text-[9px]"),
             // all-caps names have no descenders: pull the line up so it sits close under the name
-            caps && (size === "footer" ? "-mt-[8px]" : cn("-mt-[7px] mp:-mt-[6px]", hd && "max-[900px]:-mt-[6px]")),
+            caps && (size === "footer" ? "-mt-[8px]" : cn("-mt-[7px] mp:-mt-[6px]", hd && "max-[900px]:-mt-[6px] max-[700px]:landscape:-mt-[5px]")),
           )}
         >
           {site.wordmark.sub.split("").map((ch, i) => (
