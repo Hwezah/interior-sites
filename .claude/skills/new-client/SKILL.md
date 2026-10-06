@@ -65,6 +65,8 @@ All paths below are inside `/home/user/clients/<name>`.
   as "Call us to book a site visit"-style text (never invent opening hours), `socials` (TikTok link; others ""),
   `socialIcons`/`socialText` = only the networks they have, `colors` from their logo.
   (`homeLabel` already uses `fullName`.)
+- **No logo at all** (profile photo is a person or a room): keep the generic house LogoMark and use neutral
+  monochrome colours (brand `#1A1A1A`, accent `#555555`) — never invent brand colours.
 - **Colours come only from the client's logo — never HomeNative's browns/creams** unless their logo has them. `brand` =
   their darkest logo colour (dark sections/footer), `accent` = a darker shade of their main logo colour reaching
   **4.5:1 on white**, dark-theme accent 4.5:1 on a near-black; `tint`/`soft`/`onPhoto` are light/mid shades of the same.
