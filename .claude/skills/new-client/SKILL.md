@@ -32,7 +32,7 @@ add the host). Tell the user which one, then carry on with what doesn't need it.
 ## 1. Read the screenshot
 
 Pull out: company name (full + short), handle, bio lines, phone numbers, follower and like counts, what they do (from bio
-and video thumbnails), and the logo. Crop and zoom the logo with Playwright (embed the image as a base64 data URL; `file://`
+and video thumbnails), the **country** (flag emoji, phone format, place names — e.g. 🇰🇪 / 07xx +254 = Kenya), and the logo. Crop and zoom the logo with Playwright (embed the image as a base64 data URL; `file://`
 is blocked) so you can see its details. Don't guess anything that isn't shown — no city, hours, email or claims.
 
 ## 2. Name and branch
@@ -53,6 +53,11 @@ All paths below are inside `/home/user/clients/<name>`.
 
 ## 3. Re-brand (client branch only)
 
+- **Client outside Uganda** (the template defaults are Ugandan): use their country's calling code in every `tel:` and
+  `wa.me` link (Kenya `+254`, Tanzania `+255`, Rwanda `+250`…), set `locale` (e.g. `en_KE`), never write Uganda/Kampala
+  anywhere, and replace the Ugandan place names in `content/projects.ts` sample locations with their country. In the
+  pitch, "for businesses in Uganda" becomes "for businesses across East Africa".
+
 - `content/site.ts` — the one settings file: url `https://<name>.vercel.app`, `name`, `fullName`,
   `wordmark` (`name` in capitals as on their logo, `sub` e.g. "INTERIORS"), `outlineWord`, `parent: ""`, `title`,
   `description`, `blurb` (use their slogan if the logo has one), `city`/`location` ("Uganda" unless shown),
@@ -60,6 +65,8 @@ All paths below are inside `/home/user/clients/<name>`.
   as "Call us to book a site visit"-style text (never invent opening hours), `socials` (TikTok link; others ""),
   `socialIcons`/`socialText` = only the networks they have, `colors` from their logo.
   (`homeLabel` already uses `fullName`.)
+- **No logo at all** (profile photo is a person or a room): keep the generic house LogoMark and use neutral
+  monochrome colours (brand `#1A1A1A`, accent `#555555`) — never invent brand colours.
 - **Colours come only from the client's logo — never HomeNative's browns/creams** unless their logo has them. `brand` =
   their darkest logo colour (dark sections/footer), `accent` = a darker shade of their main logo colour reaching
   **4.5:1 on white**, dark-theme accent 4.5:1 on a near-black; `tint`/`soft`/`onPhoto` are light/mid shades of the same.
