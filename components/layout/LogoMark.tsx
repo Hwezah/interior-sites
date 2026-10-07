@@ -1,17 +1,16 @@
 import { cn } from "@/lib/utils";
 
 /**
- * The client's logo symbol, shown left of the wordmark. Each client branch replaces this with a redrawn copy of their
- * own symbol; this generic house is the fallback when their logo can't be read. Uses the text colour.
+ * Pasha logo symbol, redrawn from the client's badge: two lavender bars forming a P (the right bar curves around the
+ * dot) with the navy "i" inside. The navy parts use the text colour so the mark flips on dark backgrounds.
  */
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 60 58" className={cn("shrink-0", className)}>
-      <g stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 25 30 4l26 21" strokeWidth="3.4" />
-        <path d="M11 20v34h38V20" strokeWidth="2" />
-        <path d="M25 54V38h10v16" strokeWidth="2" />
-      </g>
+    <svg aria-hidden="true" viewBox="-1 -1 53 62" className={cn("shrink-0", className)}>
+      <rect x="0" y="0" width="10" height="60" fill="#9D8CF2" />
+      <path d="M38.9 0H50.4V60H38.9V28.1A14.4 14.4 0 0 0 38.9 7.9Z" fill="#9D8CF2" />
+      <ellipse cx="28.6" cy="18" rx="7.4" ry="9.2" fill="currentColor" />
+      <rect x="21.6" y="38.9" width="13.9" height="21.1" fill="currentColor" />
     </svg>
   );
 }
