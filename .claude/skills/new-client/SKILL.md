@@ -123,7 +123,7 @@ Also give each phone number in its own code block (no spaces) in case a link fai
 ```
 Hello <Company> team,
 
-We came across your work on TikTok. It's impressive: *<followers> followers and <likes> likes*.
+I came across your account on TikTok and really liked your work.
 
 We build websites and mobile apps for businesses in Uganda. As more customers search online before they call anyone, we'd love to help your business be found there too.
 
@@ -137,6 +137,7 @@ _The photos and some text are only samples for now. If you like it, we'll add yo
 If you find the idea interesting, I'm happy to talk about it. Just reply here.
 ```
 
+Never quote their follower, like or view counts in the pitch — it reads as creepy; keep the TikTok mention subtle as above.
 The first message has **no price and no proposed domain name** (WhatsApp turns anything like `name.co.ug` into a link
 that goes nowhere). Only the preview link may appear. Keep it plain and non-technical: the reader may not know what a website is. Price comes in the user's follow-up
 once the client replies.
