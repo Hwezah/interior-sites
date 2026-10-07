@@ -17,8 +17,6 @@ export function Wordmark({
   // the header uses its phone sizes below 900px too, so the full menu fits on tablets and landscape phones
   const hd = size === "header";
   const caps = site.wordmark.name === site.wordmark.name.toUpperCase();
-  // Long taglines (e.g. "INTERIOR & HOME DECO") get smaller letters and a wider-spaced name so both lines match.
-  const long = site.wordmark.sub.length > 12;
   return (
     <span
       className={cn(
@@ -38,11 +36,7 @@ export function Wordmark({
         <span
           className={cn(
             "whitespace-nowrap font-serif font-light", // one notch above the 200 used for headings
-            caps
-              ? long
-                ? "tracking-[.14em]"
-                : "tracking-[.04em]"
-              : "tracking-[-.02em]",
+            caps ? "tracking-[.04em]" : "tracking-[-.02em]",
             {
               header: "text-[30px] max-[900px]:text-[26px] max-[700px]:landscape:text-[22px] mp:text-[26px]",
               panel: "text-[28px] mp:text-[26px]",
@@ -58,19 +52,15 @@ export function Wordmark({
           aria-hidden="true"
           className={cn(
             "-mt-0.5 flex justify-between font-light leading-none",
-            long
-              ? size === "footer"
-                ? "mt-0.5 text-[10px]"
-                : cn("mt-0.5 text-[9px] mp:text-[8px]", hd && "max-[900px]:text-[8px] max-[700px]:landscape:text-[7px]")
-              : size === "footer"
-                ? "mt-0 text-[12px]"
-                : cn("text-[11px] mp:-mt-px mp:text-[10px]", hd && "max-[900px]:-mt-px max-[900px]:text-[10px] max-[700px]:landscape:text-[9px]"),
+            size === "footer"
+              ? "mt-0 text-[12px]"
+              : cn("text-[11px] mp:-mt-px mp:text-[10px]", hd && "max-[900px]:-mt-px max-[900px]:text-[10px] max-[700px]:landscape:text-[9px]"),
             // all-caps names have no descenders: pull the line up so it sits close under the name
             caps && (size === "footer" ? "-mt-[8px]" : cn("-mt-[7px] mp:-mt-[6px]", hd && "max-[900px]:-mt-[6px] max-[700px]:landscape:-mt-[5px]")),
           )}
         >
           {site.wordmark.sub.split("").map((ch, i) => (
-            <span key={i}>{ch === " " ? "\u00A0" : ch}</span>
+            <span key={i}>{ch}</span>
           ))}
         </span>
       </span>
